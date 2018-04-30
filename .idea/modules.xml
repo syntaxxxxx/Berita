@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Aplikasi-Menampilkan-Berita.iml" filepath="$PROJECT_DIR$/Aplikasi-Menampilkan-Berita.iml" />
+      <module fileurl="file://C:\Users\idn\Documents\Aplikasi-Menampilkan-Berita\Aplikasi-Menampilkan-Berita.iml" filepath="C:\Users\idn\Documents\Aplikasi-Menampilkan-Berita\Aplikasi-Menampilkan-Berita.iml" />
       <module fileurl="file://C:\Users\idn\Documents\Aplikasi-Menampilkan-Berita\PortalBerita.iml" filepath="C:\Users\idn\Documents\Aplikasi-Menampilkan-Berita\PortalBerita.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

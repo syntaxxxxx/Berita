@@ -9,8 +9,10 @@ import retrofit2.http.GET;
  */
 
 public interface ApiService {
+
     //@TIPEMETHOD("END_POINT")
     @GET("tampil_berita.php")
     Call<ResponseBerita> request_show_all_berita();
     // <ModelData> nama_method()
+
 }

@@ -16,9 +16,11 @@ public class InitRetrofit {
         return new Retrofit.Builder().baseUrl(API_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+
     }
 
     public static ApiService getInstance() {
         return setInit().create(ApiService.class);
+
     }
 }

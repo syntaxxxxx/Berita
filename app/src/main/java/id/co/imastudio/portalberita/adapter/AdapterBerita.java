@@ -16,6 +16,7 @@ import java.util.List;
 
 import id.co.imastudio.portalberita.activities.DetailActivity;
 import id.co.imastudio.portalberita.R;
+import id.co.imastudio.portalberita.network.InitRetrofit;
 import id.co.imastudio.portalberita.response.BeritaItem;
 
 import static id.co.imastudio.portalberita.activities.DetailActivity.FTO;
@@ -23,6 +24,7 @@ import static id.co.imastudio.portalberita.activities.DetailActivity.ISI;
 import static id.co.imastudio.portalberita.activities.DetailActivity.JDL;
 import static id.co.imastudio.portalberita.activities.DetailActivity.PNS;
 import static id.co.imastudio.portalberita.activities.DetailActivity.TGL;
+import static id.co.imastudio.portalberita.network.InitRetrofit.API_URL;
 
 /**
  * Created by syntax on 15/02/18.
@@ -30,7 +32,7 @@ import static id.co.imastudio.portalberita.activities.DetailActivity.TGL;
 
 public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.MyViewHolder> {
 
-    // Buat variable global untuk menampung contextnya
+    // Buat variable global untuk menampung context nya
     Context context;
     List<BeritaItem> berita;
 
@@ -50,7 +52,6 @@ public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.MyViewHold
         return holder;
     }
 
-    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         // Set Widget
@@ -58,10 +59,9 @@ public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.MyViewHold
         holder.tvTglTerbit.setText(berita.get(position).getTanggalPosting());
         holder.tvPenulis.setText("Oleh : " + berita.get(position).getPenulis());
 
+
         // Mendapatkan URL Image
-        final String urlGambarBerita =
-                "http://192.168.20.102:81/portal_berita/images/"
-                        + berita.get(position).getFoto();
+        final String urlGambarBerita = API_URL + "images/" + berita.get(position).getFoto();
 
         // Set images ke widget dengan library picaso
         // Imagesnya dari internet

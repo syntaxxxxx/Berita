@@ -25,6 +25,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
+
     // Deklarasi Widget
     private RecyclerView recyclerView;
 
@@ -35,42 +36,56 @@ public class MainActivity extends AppCompatActivity {
 
         // Inisialisasi Widget
         recyclerView = (RecyclerView) findViewById(R.id.rvListBerita);
+
         // RecyclerView harus pakai layout manager
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         // Eksekusi method
         tampilBerita();
     }
 
     private void tampilBerita() {
         ApiService api = InitRetrofit.getInstance();
+
         // Siapkan request
         Call<ResponseBerita> beritaCall = api.request_show_all_berita();
+
         // Kirim request
         beritaCall.enqueue(new Callback<ResponseBerita>() {
             @Override
             public void onResponse(Call<ResponseBerita> call, Response<ResponseBerita> response) {
+
                 // Pastikan response sukses
                 if (response.isSuccessful()) {
                     Log.d("response api", response.body().toString());
+
                     // Tampung data response ke variable
                     List<BeritaItem> data_berita = response.body().getBerita();
+
                     boolean status = response.body().isStatus();
                     // Kali response statusnya true
                     if (status) {
+
                         // Buat adapter recyclerview
                         AdapterBerita adapter = new AdapterBerita(MainActivity.this, data_berita);
                         recyclerView.setAdapter(adapter);
+
                     } else {
+
                         // Kalau tidak true
-                        Toast.makeText(MainActivity.this, "Tidak ada berita", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Tidak Ada berita",
+                                Toast.LENGTH_SHORT).show();
+
                     }
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseBerita> call, Throwable t) {
+
                 // Print ke log jika error
                 t.printStackTrace();
+
             }
         });
     }
@@ -82,12 +97,15 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
 
         if (id == R.id.profile) {
+
+            // pindah halaman yang dituju
             startActivity(new Intent(this, ProfileActivity.class));
 
         } else if (id == R.id.logout) {
