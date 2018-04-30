@@ -1,4 +1,4 @@
-package id.co.imastudio.portalberita.response;
+package id.co.imastudio.portalberita.responseAPI;
 
 import java.util.List;
 

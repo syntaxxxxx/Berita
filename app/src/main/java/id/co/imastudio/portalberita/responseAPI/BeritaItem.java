@@ -1,4 +1,4 @@
-package id.co.imastudio.portalberita.response;
+package id.co.imastudio.portalberita.responseAPI;
 
 import com.google.gson.annotations.SerializedName;
 

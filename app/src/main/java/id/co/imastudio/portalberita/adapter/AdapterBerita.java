@@ -1,6 +1,5 @@
 package id.co.imastudio.portalberita.adapter;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -16,8 +15,7 @@ import java.util.List;
 
 import id.co.imastudio.portalberita.activities.DetailActivity;
 import id.co.imastudio.portalberita.R;
-import id.co.imastudio.portalberita.network.InitRetrofit;
-import id.co.imastudio.portalberita.response.BeritaItem;
+import id.co.imastudio.portalberita.responseAPI.BeritaItem;
 
 import static id.co.imastudio.portalberita.activities.DetailActivity.FTO;
 import static id.co.imastudio.portalberita.activities.DetailActivity.ISI;

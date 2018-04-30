@@ -1,6 +1,6 @@
 package id.co.imastudio.portalberita.network;
 
-import id.co.imastudio.portalberita.response.ResponseBerita;
+import id.co.imastudio.portalberita.responseAPI.ResponseBerita;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
