@@ -1,14 +1,21 @@
 package id.co.imastudio.portalberita;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import java.util.List;
 
+import id.co.imastudio.portalberita.activities.ProfileActivity;
+import id.co.imastudio.portalberita.adapter.AdapterBerita;
 import id.co.imastudio.portalberita.network.ApiService;
 import id.co.imastudio.portalberita.network.InitRetrofit;
 import id.co.imastudio.portalberita.response.BeritaItem;
@@ -66,5 +73,30 @@ public class MainActivity extends AppCompatActivity {
                 t.printStackTrace();
             }
         });
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.item_nav, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.profile) {
+            startActivity(new Intent(this, ProfileActivity.class));
+
+        } else if (id == R.id.logout) {
+
+            // exit
+            System.exit(0);
+        }
+
+        return super.onOptionsItemSelected(item);
+
     }
 }
