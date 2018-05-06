@@ -49,5 +49,4 @@ public class BeritaItem {
     public String getIsiBerita() {
         return isiBerita;
     }
-
 }

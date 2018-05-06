@@ -47,6 +47,7 @@ public class DetailActivity extends AppCompatActivity {
 
     @SuppressLint({"SetJavaScriptEnabled", "SetTextI18n"})
     private void tampilBerita() {
+
         // Tangkap data dari intent
         String judul_berita = getIntent().getStringExtra(JDL);
         String tangal_berita = getIntent().getStringExtra(TGL);

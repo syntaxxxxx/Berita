@@ -24,9 +24,6 @@ import static id.co.imastudio.portalberita.activities.DetailActivity.PNS;
 import static id.co.imastudio.portalberita.activities.DetailActivity.TGL;
 import static id.co.imastudio.portalberita.network.InitRetrofit.API_URL;
 
-/**
- * Created by syntax on 15/02/18.
- */
 
 public class AdapterBerita extends RecyclerView.Adapter<AdapterBerita.MyViewHolder> {
 

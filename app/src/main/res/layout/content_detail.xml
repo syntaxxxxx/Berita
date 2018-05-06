@@ -33,11 +33,13 @@
                 android:text="Oleh : Menit" />
 
         </LinearLayout>
+
         <WebView
             android:id="@+id/wvContentBerita"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:ignore="WebViewLayout">
+
         </WebView>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
